@@ -24,7 +24,7 @@ p1.say_info()
 class Student(Person):
     def __init__(self, name, age, score):
         # 调用父类的构函
-        Person.__init__(self, name, age)
+        super(Student, self).__init__(name, age)
         self.score = score
 
     # 覆写父类的方法
