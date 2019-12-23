@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text">
+    <button id="btn">提交</button>
+</body>
+<script src="jq/jquery-1.12.4.min.js"></script>
+<script>
+    $(function() {
+        $('#btn').on('click', function() {
+            var data = {name:$('input').val()}
+            $.ajax({
+                url : "http://127.0.0.1:3000",
+                method:'POST',
+                data:data,
+                success:function(data,statusMsg,jqXHR){
+                    console.log(data);
+                }
+            })
+        })
+    })
+</script>
+</html>

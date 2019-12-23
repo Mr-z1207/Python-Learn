@@ -16,3 +16,13 @@ print('ABC 字符串长度', f)
 print('您好，%s(先生/女士):您%02d月话费余额为%.2f元' % ('文嵩', 5, 28.96))
 # 字符串里面的%是一个普通字符怎么办？这个时候就需要转义，用%%来表示一个%
 print('GDP增长%s%%' % (6.27))
+
+# encode()方法可以编码为指定的bytes
+a = 'ABC'.encode('ascii')
+print(a)
+a = '中文!'.encode('utf-8')
+print(a)
+# 要把bytes变为str，就需要用decode()方法
+# 如果bytes中只有一小部分无效的字节，可以传入errors='ignore'忽略错误的字节
+b = a.decode('utf-8', errors='ignore')
+print(b)

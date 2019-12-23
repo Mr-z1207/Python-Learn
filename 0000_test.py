@@ -23,3 +23,6 @@ def callSayHi(fn):
 
 
 callSayHi(sayHi)
+
+p = [('username', 'email'), ('password', 'passwd'), ('entry', 'mweibo')]
+print(type(p))
