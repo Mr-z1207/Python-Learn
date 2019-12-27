@@ -32,5 +32,5 @@ header, html = data.split(b'\r\n\r\n', 1)
 # 把HTTP头打印出来，
 print(header.decode('utf-8'))
 # 网页内容保存到文件：
-with open('000test/baidu.html', 'wb') as f:
+with open('file/051-file/baidu.html', 'wb') as f:
     f.write(html)

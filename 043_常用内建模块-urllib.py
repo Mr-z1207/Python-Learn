@@ -34,7 +34,7 @@ login_data = parse.urlencode([
     ('name', name),
 ])
 
-# 测试时，先打开 ./000test/server.js
+# 测试时，先打开 ./file/043-file/server.js
 req = request.Request('http://127.0.0.1:3000')
 with request.urlopen(req, data=login_data.encode('utf-8')) as f:
     print('Status:', f.status, f.reason)
