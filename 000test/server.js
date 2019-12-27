@@ -15,7 +15,6 @@ var server = http.createServer(function(req,res) {
             body += chunk
         })
         req.on('end',function() {
-            console.log(body)
             res.end(body)
         })
     } else if (req.method == 'GET') {
