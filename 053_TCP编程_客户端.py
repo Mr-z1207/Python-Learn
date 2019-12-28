@@ -5,10 +5,10 @@ import socket
 s = socket.socket(socket.AF_INET, socket.SOCK_STREAM)
 
 # 连接服务，指定主机和端口
-s.connect(('www.baidu.com', 80))
+s.connect(('127.0.0.1', 3000))
 
 # 发送数据：
-s.send(b'GET / HTTP/1.1\r\nHost: www.baidu.com\r\nConnection: close\r\n\r\n')
+s.send(b'hello')
 
 # 接收数据:
 # 接收数据时，调用recv(max)方法，一次最多接收指定的字节数，
@@ -27,10 +27,4 @@ data = b''.join(buffer)
 # 关闭连接:
 s.close()
 
-# 接收到的数据包括HTTP头和网页本身，我们只需要把HTTP头和网页分离一下，
-header, html = data.split(b'\r\n\r\n', 1)
-# 把HTTP头打印出来，
-print(header.decode('utf-8'))
-# 网页内容保存到文件：
-with open('file/051-file/baidu.html', 'wb') as f:
-    f.write(html)
+print(data.code('utf-8'))
