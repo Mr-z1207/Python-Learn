@@ -6,23 +6,23 @@ print(L)
 
 
 # 删掉奇数，只保留偶数
-def fn(x):
+def fn1(x):
     return x % 2 == 0
 
 
-newL = filter(fn, L)
+newL = filter(fn1, L)
 print(list(newL))
 
 # 把一个序列中的空字符串删掉
 L = ['A', '', 'B', None, 'C', '      ']
 
 
-def fn(x):
+def fn2(x):
     # Python strip() 方法用于移除字符串头尾指定的字符或字符序列
     return x and x.strip()
 
 
-newL = filter(fn, L)
+newL = filter(fn2, L)
 print(list(newL))
 
 
@@ -34,7 +34,7 @@ def _old_list():
         yield n
 
 
-def fn(n):
+def fn3(n):
     # lambda相当于匿名函数，lambda 参数: 返回值函数体
     return lambda x: x % n > 0
 
@@ -44,7 +44,7 @@ def _new_list():
     while True:
         n = next(it)
         yield n
-        it = filter(fn(n), it)
+        it = filter(fn3(n), it)
 
 
 nl = _new_list()
