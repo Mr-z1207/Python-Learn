@@ -16,7 +16,7 @@ print('绝对值：', result)
 
 
 # 参数检查 内置函数isinstance()
-def funName(data):
+def funName2(data):
     if not isinstance(data, (int, float)):
         raise TypeError('bad operand type')
     if data >= 0:
@@ -25,7 +25,7 @@ def funName(data):
         return -data
 
 
-result = funName(num)
+result = funName2(num)
 print('绝对值：', result)
 
 # # lambda相当于匿名函数，lambda 参数: 返回值函数体(见:021_39行用法)
