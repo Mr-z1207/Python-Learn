@@ -1,4 +1,4 @@
-from tkinter import *
+from tkinter import Frame, Label, Button
 
 
 # 从Frame派生一个Application类，这是所有Widget的父容器
