@@ -33,3 +33,16 @@ if __name__ == '__main__':
 # ####  命令行运行结果  ####
 # C:\WEB\python_test>python 027_模块.py ZWS
 # Hello, ZWS!
+
+
+# （2）主程序所在目录是模块所在目录的父(或祖辈)目录
+# 如下面程序结构:
+# `-- src
+#     |-- mod1.py
+#     |-- mod2
+#     |   `-- mod2.py
+#     `-- test1.py
+#     若在程序test1.py中导入模块mod2,
+#     需要在mod2文件夹中建立空文件__init__.py文件
+#     (也可以在该文件中自定义输出模块接口);
+#      然后使用 from mod2.mod2 import * 或import mod2.mod2.
