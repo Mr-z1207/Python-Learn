@@ -42,9 +42,9 @@ class createWindow(Frame):
     def __init__(self, master=None):
         Frame.__init__(self, master)
         self.pack()
-        self.createModule()
+        self.__createModule()
 
-    def createModule(self):
+    def __createModule(self):
         self.nameLabel = Label(self, text='请输入歌曲名称')
         self.nameEntry = Entry(self, text='')
         self.quitButton = Button(self, text='下载', command=self.__download)
