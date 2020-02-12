@@ -1,6 +1,6 @@
 # Python内置了字典：dict的支持，dict全称dictionary，
 # 在其他语言中也称为map，使用键-值（key-value）存储
-# 差不多js里面的对象吧
+# 差不多js里面的对象吧(json)
 d = {
     'Michael': 95,
     'Bob': 75,
@@ -25,6 +25,9 @@ result = d.get('Anyyy')
 print(result)
 result = d.get('Anyyy', -1)
 print(result)
+
+# json.dumps	将 Python 对象编码成 JSON 字符串
+# json.loads	将已编码的 JSON 字符串解码为 Python 对象
 
 # set和dict类似，也是一组key的集合，但不存储value。
 # 要创建一个set，需要提供一个list作为输入集合
