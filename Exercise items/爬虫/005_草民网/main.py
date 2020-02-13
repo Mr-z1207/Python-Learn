@@ -8,7 +8,7 @@ def nextPage(doc):
     a_button_text = doc.get_content(".page.mb a::text")
     try:
         next_page_index = a_button_text.index('下一页')
-    except:
+    except Exception:
         return False
 
     next_button_url = 'https://www.cmdy5.com/' + doc.get_content(".page.mb a::attr('href')")[next_page_index]
@@ -17,16 +17,15 @@ def nextPage(doc):
 
 def saveMovie(movie_urlList, movie_nameList):
     for i in range(len(movie_urlList)):
-        try:
-            name = movie_nameList[i].encode('gbk')
-        except:
-            continue
-
-        name = name.decode('gbk')
+        name = movie_nameList[i]
         url = movie_urlList[i]
         print(name, '-->', url)
+
         with open('movie.txt', 'a') as f:
-            f.write('%s --> %s\n' % (name, url))
+            try:
+                f.write('%s --> %s\n' % (name, url))
+            except Exception:
+                continue
 
 
 for url in urlList:
