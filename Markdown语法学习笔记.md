@@ -90,6 +90,8 @@ The HTML specification
 
 ### 1.6 内联样式
 
+(以下内联样式github并没有效果)
+
 文本支持CSS内联样式`<p style='color: #ff5f55'>正文</p>`
 
 <p style='color: #55ff55'> 绿色正文 </p>
