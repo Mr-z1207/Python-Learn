@@ -32,7 +32,7 @@
 
 ### 3.1 字符串编码转换
 
-> 004_字符串编码.py
+> 参考 [004_字符串编码.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/004_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81.py)
 
 encode()方法可以编码为指定的bytes
 要把bytes变为str，就需要用decode()方法
@@ -45,7 +45,7 @@ b = a.decode('utf-8', errors='ignore')
 
 ### 3.2 list切片
 
-> 014_切片.py
+> 参考 [014_切片.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/014_%E5%88%87%E7%89%87.py)
 
 话不多说，，，看代码
 ```python
@@ -65,7 +65,7 @@ print(L[10:20:2])
 
 ### 3.3 列表生成器
 
-> 016_列表生成式.py
+> 参考 [016_列表生成式.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/016_%E5%88%97%E8%A1%A8%E7%94%9F%E6%88%90%E5%BC%8F.py)
 
 简单来说，一个列表 [ 被操作的item 一个循环 或者 一个判断 ]
 ```python
@@ -73,13 +73,42 @@ print(L[10:20:2])
 L = [i * i for i in range(1, 11)]
 ```
 
+### 3.4 格式化字符串
+
+简省了字符串的拼接，更好的将变量加入到字符串当中
+
+#### 3.4.1. printf 风格 `%`
+
+```python
+'我叫%s，今年%s岁，喜欢%s' %('小明','18','足球')
+```
+其中 `%s` 就是模板中的占位符，表示这个位置先占着，待会儿要有数据填入到这里。然后再提供一个元组`('小明','18','足球')`，里面依次存放需要填入到 `%s` 位置 的数据,还有补足位数，长度等方法，请自行探索
+
+#### 3.4.2 f-string 格式化 `f''`
+
+> 注意：这种写法必须要Python解释器是3.6 以后的版本才支持
+
+f-string 格式化 就是在字符串模板前面加上f，然后占位符使用{} ,里面直接放入对应的数据对象。
+
+```python
+name = '小明'
+age = '18'
+like = '足球'
+
+f'我叫{name}，今年{age}岁，喜欢{like}'
+```
+
 ## 四、内建模块总结
 
 ### 4.1 datetime
 
+> 参考 [040_常用内建模块-datatime.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/040_%E5%B8%B8%E7%94%A8%E5%86%85%E5%BB%BA%E6%A8%A1%E5%9D%97-datatime.py)
+
 datetime是Python处理日期和时间的标准库。
 
 ### 4.2 collections
+
+> 参考 [0041_常用内建模块-collections.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/041_%E5%B8%B8%E7%94%A8%E5%86%85%E5%BB%BA%E6%A8%A1%E5%9D%97-collections.py)
 
 collections是Python内建的一个集合模块，提供了许多有用的集合类。
 
@@ -122,9 +151,13 @@ N/A
 
 ### 4.3 base64
 
+> 参考 [042_其他常用内建模块.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/042_%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%86%85%E5%BB%BA%E6%A8%A1%E5%9D%97.py)
+
  Base64是一种用64个字符来表示任意二进制数据的方法。由于标准的Base64编码后可能出现字符+和/，在URL中就不能直接作为参数，所以又有一种"url safe"的base64编码，其实就是把字符+和/分别变成-和_
 
  ### 4.4 itertools
+
+ > 参考 [042_其他常用内建模块.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/042_%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%86%85%E5%BB%BA%E6%A8%A1%E5%9D%97.py)
 
  Python的内建模块itertools提供了非常有用的用于操作迭代对象的函数。大概功能有
 
@@ -136,14 +169,19 @@ N/A
 
 ### 4.5 threading
 
+> 详见 [/Exercise items/003_草民网](https://github.com/Mr-z1207/Python-test/tree/master/Exercise%20items/%E7%88%AC%E8%99%AB/003_%E8%8D%89%E6%B0%91%E7%BD%91)
+
 创建多线程，对很多个数据的爬取很有用
-详见 /Exercise items/003_草民网
 
 ### 4.6 urllib 和 HTMLParser
 
 urllib提供了一系列用于操作URL的功能。具体。。度娘吧
 Python提供了HTMLParser来非常方便地解析HTML，只需简单几行代码。具体。。也是度娘吧
 还是requests 和 parsel 好用。。。
+
+### 4.7 email 和 smtplib
+
+Python对SMTP支持有smtplib和email两个模块，email负责构造邮件，smtplib负责发送邮件
 
 ## 五、第三方模块
 
