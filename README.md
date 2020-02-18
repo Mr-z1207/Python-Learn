@@ -32,8 +32,6 @@
 
 ### 3.1 字符串编码转换
 
-> 参考 [004_字符串编码.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/004_%E5%AD%97%E7%AC%A6%E4%B8%B2%E7%BC%96%E7%A0%81.py)
-
 encode()方法可以编码为指定的bytes
 要把bytes变为str，就需要用decode()方法
 
@@ -44,8 +42,6 @@ b = a.decode('utf-8', errors='ignore')
 ```
 
 ### 3.2 list切片
-
-> 参考 [014_切片.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/014_%E5%88%87%E7%89%87.py)
 
 话不多说，，，看代码
 ```python
@@ -64,8 +60,6 @@ print(L[10:20:2])
 ```
 
 ### 3.3 列表生成器
-
-> 参考 [016_列表生成式.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/016_%E5%88%97%E8%A1%A8%E7%94%9F%E6%88%90%E5%BC%8F.py)
 
 简单来说，一个列表 [ 被操作的item 一个循环 或者 一个判断 ]
 ```python
@@ -102,13 +96,9 @@ f'我叫{name}，今年{age}岁，喜欢{like}'
 
 ### 4.1 datetime
 
-> 参考 [040_常用内建模块-datatime.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/040_%E5%B8%B8%E7%94%A8%E5%86%85%E5%BB%BA%E6%A8%A1%E5%9D%97-datatime.py)
-
 datetime是Python处理日期和时间的标准库。
 
 ### 4.2 collections
-
-> 参考 [0041_常用内建模块-collections.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/041_%E5%B8%B8%E7%94%A8%E5%86%85%E5%BB%BA%E6%A8%A1%E5%9D%97-collections.py)
 
 collections是Python内建的一个集合模块，提供了许多有用的集合类。
 
@@ -151,13 +141,9 @@ N/A
 
 ### 4.3 base64
 
-> 参考 [042_其他常用内建模块.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/042_%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%86%85%E5%BB%BA%E6%A8%A1%E5%9D%97.py)
-
  Base64是一种用64个字符来表示任意二进制数据的方法。由于标准的Base64编码后可能出现字符+和/，在URL中就不能直接作为参数，所以又有一种"url safe"的base64编码，其实就是把字符+和/分别变成-和_
 
  ### 4.4 itertools
-
- > 参考 [042_其他常用内建模块.py](https://github.com/Mr-z1207/Python-test/blob/master/learning/042_%E5%85%B6%E4%BB%96%E5%B8%B8%E7%94%A8%E5%86%85%E5%BB%BA%E6%A8%A1%E5%9D%97.py)
 
  Python的内建模块itertools提供了非常有用的用于操作迭代对象的函数。大概功能有
 
@@ -168,8 +154,6 @@ N/A
 > - 把迭代器中相邻的重复元素挑出来放在一起
 
 ### 4.5 threading
-
-> 详见 [/Exercise items/003_草民网](https://github.com/Mr-z1207/Python-test/tree/master/Exercise%20items/%E7%88%AC%E8%99%AB/003_%E8%8D%89%E6%B0%91%E7%BD%91)
 
 创建多线程，对很多个数据的爬取很有用
 
