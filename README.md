@@ -219,16 +219,14 @@ selector = Selector(text=body)
 title = selector.css("title::text").extract_first()
 ```
 
-详见 /Exercise items/003_草民网
 
 ### 5.3 pygame
 
 Pygame更致力于2D游戏的开发，也就是说，你可以用Pygame写一个植物大战僵尸，但是写一个魔兽世界则相当困难
-详见 \python-project\My Bird
 
 ### 5.4 tkinter
 
-这是一个创建窗口的第三方库，详见 /Exercise items/002_酷我爬歌
+这是一个创建窗口的第三方库,注意有几个组件在 ttk 里
 
 ### 5.5 webbrowser
 
